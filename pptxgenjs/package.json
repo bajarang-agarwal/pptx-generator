@@ -1,0 +1,122 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "pptxgenjs@",
+        "scope": null,
+        "escapedName": "pptxgenjs",
+        "name": "pptxgenjs",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/lokeshgupta/Desktop/anurag/pptx-generator"
+    ]
+  ],
+  "_from": "pptxgenjs@latest",
+  "_id": "pptxgenjs@1.9.0",
+  "_inCache": true,
+  "_location": "/pptxgenjs",
+  "_nodeVersion": "6.9.4",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/pptxgenjs-1.9.0.tgz_1507690391483_0.13882413785904646"
+  },
+  "_npmUser": {
+    "name": "brentely",
+    "email": "brentely@gmail.com"
+  },
+  "_npmVersion": "5.4.2",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "pptxgenjs@",
+    "scope": null,
+    "escapedName": "pptxgenjs",
+    "name": "pptxgenjs",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/pptxgenjs/-/pptxgenjs-1.9.0.tgz",
+  "_shasum": "81be6536a42f9363937dd1f3f67acbe2ce9d899c",
+  "_shrinkwrap": null,
+  "_spec": "pptxgenjs@",
+  "_where": "/Users/lokeshgupta/Desktop/anurag/pptx-generator",
+  "author": {
+    "name": "Brent Ely",
+    "url": "https://github.com/gitbrent/"
+  },
+  "bugs": {
+    "url": "https://github.com/gitbrent/PptxGenJS/issues"
+  },
+  "dependencies": {
+    "express": "^4.15.3",
+    "image-size": ">=0.5.1",
+    "is-electron": "^2.1.0",
+    "jquery": "^3.2.1",
+    "jquery-node": "^0.3.0",
+    "jszip": ">=3.1.2"
+  },
+  "description": "JavaScript framework that creates PowerPoint (pptx) presentations",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-ignore": "^2.0.2",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^3.0.0"
+  },
+  "directories": {
+    "example": "examples",
+    "libs": "dist"
+  },
+  "dist": {
+    "integrity": "sha512-qNxXPkwkevxWFmiJ8tS4USi74gI/K6k+t9m55oxQQnpwjqecgdI+Gsukzu9agqq/0iKGRaHnN7wEPfkYu4Q99Q==",
+    "shasum": "81be6536a42f9363937dd1f3f67acbe2ce9d899c",
+    "tarball": "https://registry.npmjs.org/pptxgenjs/-/pptxgenjs-1.9.0.tgz"
+  },
+  "gitHead": "a29a840897a9d8a40c6bbe9437150ba8c1c9124a",
+  "homepage": "https://gitbrent.github.io/PptxGenJS/",
+  "keywords": [
+    "javascript",
+    "javascript-create-powerpoint",
+    "javascript-create-pptx",
+    "javascript-generate-pptx",
+    "javascript-pptx",
+    "javascript-powerpoint",
+    "javascript-powerpoint-charts",
+    "js-create-powerpoint",
+    "js-create-pptx",
+    "js-generate-powerpoint",
+    "js-pptx",
+    "js-produce-powerpoint",
+    "js-powerpoint",
+    "powerpoint",
+    "powerpoint-charts",
+    "powerpoint-presentation",
+    "ppt",
+    "pptx",
+    "presentations"
+  ],
+  "license": "MIT",
+  "main": "dist/pptxgen.js",
+  "maintainers": [
+    {
+      "name": "brentely",
+      "email": "brentely@gmail.com"
+    }
+  ],
+  "name": "pptxgenjs",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitbrent/PptxGenJS.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.9.0"
+}
