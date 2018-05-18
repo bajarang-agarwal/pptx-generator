@@ -1,6 +1,6 @@
 {
   "name": "pptx-generator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A npm package to generate pptx along with the features of text add, image add, read existing template.",
   "main": "index.js",
   "private": false,
