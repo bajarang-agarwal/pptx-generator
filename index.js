@@ -49,9 +49,22 @@ var PPTX_GENERATOR =  {
         return slide;
     },
 
-    updateMedia: function(path, relImage){
+    updateMedia: function(slide,placeHolder, path){
+        var id = this.getImageId(slide.content,placeHolder);
         var bitmap  = Array.prototype.slice.call(FS.readFileSync(path), 0);
-        currentPresentation.contents["ppt/media/" + relImage] = bitmap;
+        if(currentPresentation.contents["ppt/media/image" + (id)+'.jpeg']){
+            currentPresentation.contents["ppt/media/image" + (id)+'.jpeg'] = bitmap;
+        }else if(currentPresentation.contents["ppt/media/image" + (id)+'.png']){
+            currentPresentation.contents["ppt/media/image" + (id)+'.png'] = bitmap;
+        }
+    },
+
+    getImageId : function(str, pat){
+        var headerIndex = str.indexOf(pat);
+        var subStr = str.substr(headerIndex-50, headerIndex);
+        var idIndex  = subStr.search('id');
+        var idSubStr = subStr.substr(idIndex,10);
+        return idSubStr.split(`"`)[1];
     },
 
     replaceText : function(slide, placeHolder, value){
@@ -60,11 +73,27 @@ var PPTX_GENERATOR =  {
         return slide;
     },
 
-    replaceImage : function(slide, imageName, rel){
+    /**
+     * this function is for get 
+     * the index of string to remove image
+     */
+    nthIndex : function(str, pat){
+        var indexOfWord = str.indexOf(pat);
+        var subStr      = str.substr(indexOfWord -100, indexOfWord + 900);
+        var firstPicIndex = subStr.indexOf('<p:pic>');
+        var lastPicindex  = subStr.indexOf('</p:pic>');
+        var indexOfHeader = subStr.indexOf(pat);
+        lastPicindex  =  (indexOfWord + lastPicindex) - ( indexOfHeader - 8) ;
+        firstPicIndex = (indexOfWord - (firstPicIndex + 10 ));
+        return  {firstPicIndex:firstPicIndex, lastPicindex : lastPicindex};
+    },
 
-        //var relJSON = JSON.parse(XML2JSON.toJson(slide.rel));
-        //var relImage = relJSON.Relationships.Relationship[0].Target;
-        //currentPresentation.contents["ppt/media/" + relImage.substring(relImage.lastIndexOf("/")+1)] = Array.prototype.slice.call(FS.readFileSync('./media/' + imageName), 0);
+    removeImage : function(slide,placeHolder,path){
+        var content     = (JSON.parse(XML2JSON.toJson(slide.content)));
+        var indexObj    = this.nthIndex(slide.content,placeHolder);
+        var xml = (slide.content).substr(0, indexObj.firstPicIndex) + (slide.content).substr(indexObj.lastPicindex);
+        slide.content = xml;
+        return slide;
     },
 
     addMedia: function(path){
