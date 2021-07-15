@@ -3,10 +3,24 @@
   "version": "1.1.2",
   "description": "A npm package to generate pptx along with the features of text add, image add, read existing template.",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bajarang-agarwal/pptx-generator.git"
+  },
   "private": false,
   "dependencies": {
     "deferred": "",
     "fs": "",
     "xml2json": ""
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/bajarang-agarwal/pptx-generator/issues"
+  },
+  "homepage": "https://github.com/bajarang-agarwal/pptx-generator#readme",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bajarang",  
+  "license": "ISC"
 }
