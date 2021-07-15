@@ -1,4 +1,4 @@
-var PPT_Template 	= require('ppt-template'),
+var PPT_Template 	= require('./ppt-template/index.js'),
     DEFERRED        = require('deferred'),
     FS 				= require('fs'),
     XML2JSON 		= require('xml2json');

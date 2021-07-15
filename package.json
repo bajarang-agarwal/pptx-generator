@@ -7,7 +7,6 @@
   "dependencies": {
     "deferred": "",
     "fs": "",
-    "ppt-template": "",
-    "xml2json" : ""
+    "xml2json": ""
   }
 }
